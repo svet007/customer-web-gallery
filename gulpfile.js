@@ -22,6 +22,7 @@ var gulp          = require('gulp'),
     gutil         = require('gulp-util'),   // Utility like beep when error
     plumber       = require('gulp-plumber'), // This is used so that the gulp watch doesn't break even though error
     imagemin      = require('gulp-imagemin'),
+    unretina      = require('gulp-unretina'),
     pngcrush      = require('imagemin-pngcrush'),
     notify        = require('gulp-notify'),
     browserSync   = require('browser-sync'),
@@ -29,17 +30,22 @@ var gulp          = require('gulp'),
 
 // Define path
 var paths = {
+    config      : './config.rb',
     sass        : 'app/source/sass/**/*.sass',
     stylesheet  : 'app/source/sass',
     js          : 'app/source/js/**/*.js',
-    img         : 'app/source/images/*'
+    img         : 'app/source/images/**',
+    retinaSrc   : 'app/source/images/icons2x/**/*.{png,jpg,jpeg}'
 };
 
 var dest  = {
-    css         : 'app/Css',
-    script      : 'app/Scripts/custom',
-    image       : 'app/images'
+    css         : 'app/public/Css',
+    script      : 'app/public/Scripts/custom',
+    image       : 'app/public/images',
+    icons       : 'app/source/images',
+    html        : 'app/public/'
 };
+
 
 // Compass Modules here
 var modules = ['breakpoint'];
@@ -58,7 +64,7 @@ gulp.task('browser-sync', function () {
     port: 4000,
     notify: false,
       server: {
-        baseDir : './app/',
+        baseDir : './app/public',
      }
     });
 });
@@ -86,6 +92,7 @@ gulp.task('compass', function() {
           errorHandler: notify.onError("Compass build failed")
         }))
         .pipe(compass({
+            config_file : paths.config,
             sass        : paths.stylesheet,
             css         : dest.css,
             require     : modules
@@ -113,9 +120,15 @@ gulp.task('scripts', function() {
         .pipe(reload({stream: true})); // This is for Browser-Sync
 });
 
+// Icons Unretina
+gulp.task('unretina', function () {
+  gulp.src(paths.retinaSrc)
+    .pipe(unretina())
+    .pipe(gulp.dest(dest.icons + '/icons1x'));
+});
 
 // Image Minfication Tasks Here
-gulp.task('image', function() {
+gulp.task('image', ['unretina'], function() {
   return gulp
         .src(paths.img)
         .pipe(imagemin())
@@ -128,7 +141,8 @@ gulp.task('image', function() {
 // HTML Task Here
 gulp.task('html', function() {
   return gulp
-        .src('app/*.html')
+        .src('app/source/*.html')
+        .pipe(gulp.dest(dest.html))
         .pipe(notify({message: htmlMessage}))
         .pipe(reload({stream: true})); // This is for Browser-Sync
 });
@@ -148,7 +162,7 @@ gulp.task('clean', function() {
 gulp.task('watch', function() {
         gulp.watch(paths.sass, ['compass']);  // Compass Watch
         gulp.watch('app/css/*.css', ['clean']); // Clean Watch
-        gulp.watch('app/*.html', ['html']); // HTML Watch
+        gulp.watch('app/source/*.html', ['html']); // HTML Watch
         gulp.watch(paths.js, ['scripts']); // Script Watch
         gulp.watch(paths.img, ['image']); // ImageMin Watch
 });

@@ -1,0 +1,43 @@
+/* 
+ *Makes possible to use a n-ple density sprite
+ *Automatically adapts background-size and offset when $multiplier is greater than 1
+ *Allows you to use automatic size generation, which is automatically adapted when $multiplier is greater than 1
+ *
+ *Required parameters:
+ *- $sprite - the sprite name
+ *- $spriteMap - the spriteMap variable
+ *- $spriteUrl - the sprite map url of the sprite
+ *
+ *Optional parameters:
+ *- $multiplier (1) - the sprite density (1 for single density, 2 for retina, 3, etc.)
+ *- $renderSize (false) - tells the mixin to render width and height of the box containing the sprite
+ *- $offsetX (0) - the horizontal offset (px) for the image in the box
+ *- $offsetY (0) - the vertical offset (px) for the image in the box
+=useNxSprite($sprite, $spriteMap, $spriteUrl, $multiplier: 1, $renderSize: false, $offsetX: 0, $offsetY: 0)
+  $spritePosition: sprite-position($spriteMap, $sprite, $offsetX * $multiplier, $offsetY * $multiplier)
+  background: transparent $spriteUrl no-repeat nth($spritePosition, 1) / $multiplier nth($spritePosition, 2) / $multiplier
+  @if $multiplier > 1
+    background-size: image-width(sprite-path($spriteMap)) / $multiplier image-height(sprite-path($spriteMap)) / $multiplier
+  @if $renderSize
+    height: image-height(sprite-file($spriteMap, $sprite)) / $multiplier
+    width: image-width(sprite-file($spriteMap, $sprite)) / $multiplier
+
+/*
+ *Utility mixin to use single and double density sprite, with double density media query included
+ *
+ *Required parameters:
+ *- $sprite - the sprite name
+ *- $sprite1xMap - the spriteMap variable for the 1x sprites
+ *- $sprite2xMap - the spriteMap variable for the 2x sprites
+ *- $sprite1xUrl - the sprite map url of the 1x sprites
+ *- $sprite2xUrl - the sprite map url of the 2x sprites
+ *
+ *Optional parameters:
+ *- $renderSize (false) - tells the mixin to render width and height of the box containing the sprite
+ *- $offsetX (0) - the horizontal offset (px) for the image in the box
+ *- $offsetY (0) - the vertical offset (px) for the image in the box
+=use1x2xSprite($sprite, $sprite1xMap, $sprite2xMap, $sprite1xUrl, $sprite2xUrl, $renderSize: false, $offsetX: 0, $offsetY: 0)
+  +useNxSprite($sprite, $sprite1xMap, $sprite1xUrl, 1, $renderSize, $offsetX, $offsetY)
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+    +useNxSprite($sprite, $sprite2xMap, $sprite2xUrl, 2, $renderSize, $offsetX, $offsetY)
+
