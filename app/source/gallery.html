@@ -10,6 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link href='https://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 
@@ -43,10 +45,102 @@
           </li>
         </ul>
 
+        <div id="container" class="grid">
+          <div class="grid-sizer"></div>
+          <div class="grid-item">
+            <a href="#popup" class="open-popup"><img src="images/portfolio/Alice-3366.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup1" class="open-popup"><img src="images/portfolio/_Alice-3350-Edit.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup3" class="open-popup"><img src="images/portfolio/_alice-0791.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup4" class="open-popup"><img src="images/portfolio/davinder-3129-Edit.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup5" class="open-popup"><img src="images/portfolio/_baby-4504-Edit.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup6" class="open-popup"><img src="images/portfolio/diana-1146-Edit.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup7" class="open-popup"><img src="images/portfolio/Yailin Rodrigues-8015.jpg"></a>
+          </div>
+          <div class="grid-item">
+            <a href="#popup8" class="open-popup"><img src="images/portfolio/Yailin Rodrigues-8064.jpg"></a>
+          </div>
+        </div>
 
+        <ul class="m-navigation--bottom-list">
+          <li class="m-navigation--bottom-item">
+            <a href="#" target="_blank" class="icon-phone"></a>
+          </li>
+          <li class="m-navigation--bottom-item">
+            <a href="#popupContact" target="_blank" class="icon-envelope open-contact"></a>
+          </li>
+          <li class="m-navigation--bottom-item">
+            <a href="#"target="_blank" class="icon-message"></a>
+          </li>
+        </ul>
+
+        <div id="popup" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>01</h2>
+          <img src="images/portfolio/Alice-3366.jpg">
+        </div>
+        <div id="popup1" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>02</h2>
+          <img src="images/portfolio/_Alice-3350-Edit.jpg">
+        </div>
+        <div id="popup2" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>03</h2>
+        </div>
+        <div id="popup3" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>04</h2>
+          <img src="images/portfolio/_alice-0791.jpg">
+        </div>
+        <div id="popup4" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>05</h2>
+          <img src="images/portfolio/davinder-3129-Edit.jpg">
+        </div>
+        <div id="popup5" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>06</h2>
+          <img src="images/portfolio/_baby-4504-Edit.jpg">
+        </div>
+        <div id="popup6" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>07</h2>
+          <img src="images/portfolio/Diana-1146-Edit.jpg">
+        </div>
+        <div id="popup7" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>08</h2>
+          <img src="images/portfolio/Yailin Rodrigues-8015.jpg">
+        </div>
+        <div id="popup8" class="popup" style="display: none; width: 100%; color:#fff">
+          <h2>09</h2>
+          <img src="images/portfolio/Yailin Rodrigues-8064.jpg">
+        </div>
+
+        <div id="popupContact" class="popup" style="display: none; width: 100% color:#fff">
+          <form id="contactForm" class="m-form">
+            <div class="m-form--row">
+              <label>Phone number</label>
+              <input id="phone" max-length="14" type="tel" data-masked-input="(999) 999-9999" placeholder="(XXX) XXX-XXXX">
+            </div>
+            <div class="m-form--row">
+              <label>Email Address</label>
+              <input type="email" placeholder="yourname@example.com">
+            </div>
+            <div class="m-form--row">
+              <input type="button" value="Submit" />
+            </div>
+          </form>
+        </div>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="Scripts/vendor/masonry.pkgd.min.js"></script>
+        <script src="Scripts/vendor/jquery.fullscreen-popup.min.js"></script>
+        <script src="Scripts/vendor/jquery.masked-input.js"></script>
 
         <script src="Scripts/custom/compiled.min.js"></script>
 

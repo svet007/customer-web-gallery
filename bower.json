@@ -4,7 +4,7 @@
   "dependencies": {
     "normalize-scss": "~3.0.2",
     "bourbon": "4.2.3",
-    "neat": "1.7.0"
+    "neat": "1.7.0",
+    "jquery-nested": "*"
   }
 }
-

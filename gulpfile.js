@@ -33,7 +33,7 @@ var paths = {
     config      : './config.rb',
     sass        : 'app/source/sass/**/*.sass',
     stylesheet  : 'app/source/sass',
-    js          : 'app/source/js/**/*.js',
+    js          : 'app/source/js/*.js',
     img         : 'app/source/images/**',
     retinaSrc   : 'app/source/images/icons2x/**/*.{png,jpg,jpeg}'
 };
@@ -128,7 +128,7 @@ gulp.task('unretina', function () {
 });
 
 // Image Minfication Tasks Here
-gulp.task('image', ['unretina'], function() {
+gulp.task('image', function() {
   return gulp
         .src(paths.img)
         .pipe(imagemin())

@@ -1,13 +1,16 @@
 .m-navigation--top-list
   +clearfix
-  background-color: rgba(207, 110, 201, 0.71)
-  height: 50px
+  position: fixed
+  top: 0
+  z-index: 1000
+  background-color: rgba(207, 110, 201, 0.9)
+  height: 65px
   width: 100%
   margin: 0
   padding: 0
 
 .m-navigation--top-item
-  margin: 5px 0
+  margin: 13px 0
   +no-bullets
   width: 16.6667% // fallback for non-calc() browsers
   width: calc(100% / 6)
@@ -16,4 +19,23 @@
   [class^="icon-"], [class*=" icon-"]
     display: inline-block
 
-.m-navigation--bottom
+.m-navigation--bottom-list
+  +clearfix
+  position: fixed
+  bottom: 0
+  z-index: 1000
+  background-color: rgba(55, 176, 95, 0.9)
+  height: 65px
+  width: 100%
+  margin: 0
+  padding: 0
+
+.m-navigation--bottom-item
+  margin: 10px 0
+  +no-bullets
+  width: 33.333% // fallback for non-calc() browsers
+  width: calc(100% / 3)
+  float: left
+  text-align: center
+  [class^="icon-"], [class*=" icon-"]
+    display: inline-block
