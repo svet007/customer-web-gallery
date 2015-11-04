@@ -1,0 +1,27 @@
+.m-header
+  background-color: white
+  position: relative
+
+.m-header--note
+  +inline-block
+  font-family: "Roboto", sans-serif
+  font-weight: normal
+  font-size: 12px
+  color: #9c9c9c
+  margin-bottom: 12px
+  &.left
+    float: left
+  &.right
+    float: right
+
+.m-header--info-bar
+  box-shadow: 0 3px 4px rgba(0,0,0,0.2)
+  background-color: white
+  height: 65px
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 100
+  .m-actions
+    line-height: 60px

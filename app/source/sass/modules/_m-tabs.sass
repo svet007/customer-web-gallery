@@ -1,0 +1,27 @@
+.tab-content
+  display: inherit
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    display: none
+
+.tab-content.current
+  display: inherit
+
+.tabs
+  +no-bullets
+  margin: 0
+  padding: 0
+  li
+    font-family: "Roboto", sans-serif
+    float: left
+    padding: 15px 10px
+    color: white
+    cursor: pointer
+    width: 33.333% // fallback for non-calc() browsers
+    width: calc(100% / 3)
+    text-align: center
+    &:nth-child(1)
+      background-color: #dd5c9e
+    &:nth-child(2)
+      background-color: #42cac0
+    &:nth-child(3)
+      background-color: #8387e8

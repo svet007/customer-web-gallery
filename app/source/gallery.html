@@ -16,15 +16,99 @@
 
 
         <link rel="stylesheet" href="css/app.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <ul class="m-navigation--top-list">
+        <div class="m-header hidden-mobile">
+          <div class="l-row">
+            <h2 class="text-center no-bottom-space">Your Gallery</h2>
+            <h5 class="text-center">This is your gallery you can find you photos.</h5>
+            <h6 class="m-header--note left">Chose the method to contact us</h6>
+            <h6 class="m-header--note right">Share gallery or send it to your friends</h6>
+          </div>
+          <div class="m-header--info-bar">
+            <div class="l-row overflow-visible">
+              <hr>
+              <div id="cbp-tm-menu" class="m-actions left cbp-tm-menu">
+                <div>
+                  <a href="#" class="m-button--grey narrow"><i class="icon-phone-desktop"></i></a>
+                  <div class="cbp-tm-submenu">
+                    <div>
+                      <a href="#">test</a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="m-button--grey narrow"><i class="icon-mail-desktop"></i></a>
+                  <div class="cbp-tm-submenu">
+                    <div>
+                      <a href="#">test1</a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="m-button--grey narrow"><i class="icon-message-desktop"></i></a>
+                  <div class="cbp-tm-submenu">
+                    <div>
+                      <a href="#">test3</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cbp-tm-menu" class="m-actions right cbp-tm-menu">
+                <div>
+                  <a href="#" class="m-button--red"><i class="icon-share"></i>Share</a>
+                  <div class="cbp-tm-submenu">
+                    <div>
+                      <div class="component">
+                        <a href="#" class="icon icon-cube icon-tumblr-social">rss</a>
+                        <a href="#" class="icon icon-cube icon-twitter-social">twitter</a>
+                        <a href="#" class="icon icon-cube icon-google-plus-social">google+</a>
+                        <a href="#" class="icon icon-cube icon-instagram-social">github</a>
+                        <a href="#" class="icon icon-cube icon-facebook-social">facebook</a>
+                      </div>
+                      <div class="l-box--medium text-center">
+                        <h5 class="no-space text-info-tiny"><strong>Share whole gallery in social networks!</strong></h5>
+                        <p class="no-space text-info-tiny">Share your whole gallery with your friends.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="m-button--grey"><i class="icon-send"></i>Send</a>
+                  <div class="cbp-tm-submenu">
+                    <div>
+                      <form class="m-form--tooltip">
+                        <div class="m-form--row">
+                          <textarea placeholder="Add a Message?"></textarea>
+                        </div>
+                        <div class="m-form--row">
+                          <input type="email">
+                          <label>To:</label>
+                        </div>
+                        <div class="m-form--row">
+                          <input type="text">
+                          <label>Subject:</label>
+                        </div>
+                      </form>
+                      <div class="l-box--medium text-center">
+                        <h5 class="no-space text-info-tiny"><strong>Send message to your friends!</strong></h5>
+                        <p class="no-space text-info-tiny">Share your whole gallery with your friends.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="m-navigation--top-list visible-mobile">
           <li class="m-navigation--top-item">
             <a href="#" target="_blank" class="icon-mail"></a>
           </li>
@@ -45,35 +129,7 @@
           </li>
         </ul>
 
-        <div id="container" class="grid">
-          <div class="grid-sizer"></div>
-          <div class="grid-item">
-            <a href="#popup" class="open-popup"><img src="images/portfolio/Alice-3366.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup1" class="open-popup"><img src="images/portfolio/_Alice-3350-Edit.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup3" class="open-popup"><img src="images/portfolio/_alice-0791.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup4" class="open-popup"><img src="images/portfolio/davinder-3129-Edit.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup5" class="open-popup"><img src="images/portfolio/_baby-4504-Edit.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup6" class="open-popup"><img src="images/portfolio/diana-1146-Edit.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup7" class="open-popup"><img src="images/portfolio/Yailin Rodrigues-8015.jpg"></a>
-          </div>
-          <div class="grid-item">
-            <a href="#popup8" class="open-popup"><img src="images/portfolio/Yailin Rodrigues-8064.jpg"></a>
-          </div>
-        </div>
-
-        <ul class="m-navigation--bottom-list">
+        <ul class="m-navigation--bottom-list visible-mobile">
           <li class="m-navigation--bottom-item">
             <a href="#" target="_blank" class="icon-phone"></a>
           </li>
@@ -85,40 +141,154 @@
           </li>
         </ul>
 
-        <div id="popup" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>01</h2>
-          <img src="images/portfolio/Alice-3366.jpg">
+        <div id="container" class="grid l-row">
+          <div class="grid-sizer"></div>
+          <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="http://i.imgur.com/qQxKr4B.jpg" itemprop="contentUrl" data-size="340x340">
+                <img src="http://i.imgur.com/qQxKr4B.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption  1</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/_alice-0791.jpg" itemprop="contentUrl" data-size="340x340">
+                <img src="images/portfolio/_alice-0791.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/davinder-3129-Edit.jpg" itemprop="contentUrl" data-size="600x900">
+                <img src="images/portfolio/davinder-3129-Edit.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 3</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="contentUrl" data-size="900x600">
+                <img src="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 4</figcaption> -->
+            </figure>
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="http://i.imgur.com/qQxKr4B.jpg" itemprop="contentUrl" data-size="1024x1024">
+                <img src="http://i.imgur.com/qQxKr4B.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption  1</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/_alice-0791.jpg" itemprop="contentUrl" data-size="340x340">
+                <img src="images/portfolio/_alice-0791.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/davinder-3129-Edit.jpg" itemprop="contentUrl" data-size="600x900">
+                <img src="images/portfolio/davinder-3129-Edit.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 3</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="contentUrl" data-size="900x600">
+                <img src="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 4</figcaption> -->
+            </figure>
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="http://i.imgur.com/qQxKr4B.jpg" itemprop="contentUrl" data-size="340x340">
+                <img src="http://i.imgur.com/qQxKr4B.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption  1</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/_alice-0791.jpg" itemprop="contentUrl" data-size="340x340">
+                <img src="images/portfolio/_alice-0791.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 2</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/davinder-3129-Edit.jpg" itemprop="contentUrl" data-size="600x900">
+                <img src="images/portfolio/davinder-3129-Edit.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 3</figcaption> -->
+            </figure>
+
+            <figure class="grid-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="contentUrl" data-size="900x600">
+                <img src="images/portfolio/Yailin Rodrigues-8064.jpg" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <!-- <figcaption itemprop="caption description">Image caption 4</figcaption> -->
+            </figure>
+          </div>
         </div>
-        <div id="popup1" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>02</h2>
-          <img src="images/portfolio/_Alice-3350-Edit.jpg">
-        </div>
-        <div id="popup2" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>03</h2>
-        </div>
-        <div id="popup3" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>04</h2>
-          <img src="images/portfolio/_alice-0791.jpg">
-        </div>
-        <div id="popup4" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>05</h2>
-          <img src="images/portfolio/davinder-3129-Edit.jpg">
-        </div>
-        <div id="popup5" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>06</h2>
-          <img src="images/portfolio/_baby-4504-Edit.jpg">
-        </div>
-        <div id="popup6" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>07</h2>
-          <img src="images/portfolio/diana-1146-Edit.jpg">
-        </div>
-        <div id="popup7" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>08</h2>
-          <img src="images/portfolio/Yailin Rodrigues-8015.jpg">
-        </div>
-        <div id="popup8" class="popup" style="display: none; width: 100%; color:#fff">
-          <h2>09</h2>
-          <img src="images/portfolio/Yailin Rodrigues-8064.jpg">
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+          <!-- Background of PhotoSwipe. 
+              It's a separate element, as animating opacity is faster than rgba(). -->
+          <div class="pswp__bg"></div>
+
+          <!-- Slides wrapper with overflow:hidden. -->
+          <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+            <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+              <div class="pswp__top-bar">
+
+                  <!--  Controls are self-explanatory. Order can be changed. -->
+
+                  <div class="pswp__counter"></div>
+
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                  <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                  <!-- element will get class pswp__preloader--active when preloader is running -->
+                  <div class="pswp__preloader">
+                      <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div> 
+              </div>
+
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+
+              <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="popupContact" class="popup" style="display: none; width: 100% color:#fff">
@@ -141,6 +311,9 @@
         <script src="Scripts/vendor/masonry.pkgd.min.js"></script>
         <script src="Scripts/vendor/jquery.fullscreen-popup.min.js"></script>
         <script src="Scripts/vendor/jquery.masked-input.js"></script>
+        <script src="Scripts/vendor/jquery.sticky.js"></script>
+        <script src="Scripts/vendor/photoswipe.min.js"></script>
+        <script src="Scripts/vendor/photoswipe-ui-default.min.js"></script>
 
         <script src="Scripts/custom/compiled.min.js"></script>
 

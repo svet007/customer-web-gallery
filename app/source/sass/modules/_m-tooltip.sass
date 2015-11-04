@@ -1,0 +1,163 @@
+/* reset  list style
+.cbp-tm-menu
+  > div
+    float: left
+    position: relative
+
+/* set menu position; change here to set to relative or float, etc.
+
+/* first level menu items
+
+// .no-touch .cbp-tm-menu > li > a
+//   &:hover, &:active
+//     color: #02639d
+//
+/* sumbenu with transitions
+
+.cbp-tm-submenu
+  position: absolute
+  display: block
+  visibility: hidden
+  opacity: 0
+  padding: 0
+  text-align: left
+  pointer-events: none
+  +transition(visibility 0s, opacity 0s)
+  > div
+    +box-shadow
+    line-height: 18px
+    overflow: hidden
+
+.cbp-tm-show .cbp-tm-submenu
+  width: 20em
+  left: 50%
+  margin: 0 0 0 -10em
+  opacity: 1
+  display: inline-block
+  visibility: visible
+  pointer-events: auto
+  +transition(visibility 0s, opacity 0.3s)
+  .m-actions.left &
+    margin: 0 0 0 -1em
+  .m-actions.right &
+    margin: 0 0 0 -17.3em
+
+.cbp-tm-show-above .cbp-tm-submenu
+  bottom: 100%
+  padding-bottom: 10px
+
+.cbp-tm-show-below .cbp-tm-submenu
+  top: 100%
+  padding-top: 10px
+
+/* extreme cases: not enough space on the sides
+
+.cbp-tm-nospace-right .cbp-tm-submenu
+  right: 0
+  left: auto
+
+.cbp-tm-nospace-left .cbp-tm-submenu
+  left: 0
+
+/* last menu item has to fit on the screen
+
+.cbp-tm-menu > div:last-child .cbp-tm-submenu
+  right: 0
+
+/*  
+ *arrow: depending on where the menu will be shown, we set 
+ *the right position for the arrow
+
+.cbp-tm-submenu:after, .cbp-tm-submenu:before
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
+
+.cbp-tm-show-above .cbp-tm-submenu:after, .cbp-tm-show-above .cbp-tm-submenu:before
+  top: 100%
+  margin-top: -10px
+
+.cbp-tm-show-below .cbp-tm-submenu:after, .cbp-tm-show-below .cbp-tm-submenu:before
+  bottom: 100%
+  margin-bottom: -10px
+
+.cbp-tm-submenu:after, .cbp-tm-submenu:before
+  border-color: transparent
+  border-width: 16px
+  margin-left: -16px
+  .m-actions.left &
+    left: 5%
+  .m-actions.right &
+    right: 7%
+
+.cbp-tm-show-above .cbp-tm-submenu:after
+  border-top-color: #fff
+
+.cbp-tm-show-above .cbp-tm-submenu:before
+  border-top-color: #000
+
+.cbp-tm-show-below .cbp-tm-submenu:after
+  border-bottom-color: #fff
+
+.cbp-tm-show-below .cbp-tm-submenu:before
+  border-bottom-color: #000
+
+.cbp-tm-submenu div
+  display: block
+  background: #fff
+
+.no-touch .cbp-tm-submenu div a
+  &:hover, &:active
+    color: #fff
+    background: #47a3da
+
+/* the icons (main level menu icon and sublevel icons)
+
+/* Media Queries
+@media screen and (max-width: 55.6875em)
+  .cbp-tm-menu
+    font-size: 80%
+
+@media screen and (max-height: 25.25em), screen and (max-width: 44.3125em)
+  .cbp-tm-menu
+    font-size: 100%
+    position: relative
+    text-align: center
+    padding: 0
+    top: auto
+    div
+      display: block
+      margin: 0
+      border-bottom: 4px solid #3793ca
+      &:first-child
+        border-top: 4px solid #3793ca
+  .cbp-tm-show a
+    color: #fff
+    background: #02639d
+  .no-touch .cbp-tm-menu a
+    &:hover, &:active
+      color: #fff
+      background: #02639d
+  .cbp-tm-submenu
+    position: relative
+    display: none
+    width: 100%
+    div
+      padding: 0
+      a
+        padding: 0.6em 2.3em 0.6em 0.6em
+        border: none
+        border-bottom: 2px solid #6fbbe9
+    &:after
+      display: none
+  .cbp-tm-menu .cbp-tm-show .cbp-tm-submenu
+    display: block
+    width: 100%
+    left: 0
+    margin: 0
+    padding: 0
+    bottom: auto
+    top: auto

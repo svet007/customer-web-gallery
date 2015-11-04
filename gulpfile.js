@@ -48,7 +48,7 @@ var dest  = {
 
 
 // Compass Modules here
-var modules = ['breakpoint'];
+var modules = ['breakpoint', 'sassy-buttons'];
 
 
 // Plumber Error

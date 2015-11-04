@@ -32,3 +32,42 @@
     background-color: #37b05f
     color: white
     font-family: "Roboto-Medium", sans-serif
+
+.m-form--tooltip
+  .m-form--row
+    +clearfix
+    background-color: #f3f3f3
+    border-bottom: 1px solid #c6c6c6
+    border-top: 1px solid #fff
+  textarea, input
+    +inline-block
+    font-family: "Roboto", sans-serif
+    font-size: 12px
+    line-height: 16px
+    width: 100%
+    background-color: #f3f3f3
+    -webkit-appearance: none
+    border: 0
+    margin: 0
+    outline: none
+    &:focus
+      background-color: white
+      + label
+        background-color: white
+  input
+    float: right
+    width: 80%
+    padding: 10px
+    padding-left: 0
+    height: 38px
+  textarea
+    padding: 10px
+    color: black
+    height: 100px
+  label
+    +inline-block
+    font-size: 12px
+    color: #626262
+    float: left
+    padding: 10px
+    width: 20%

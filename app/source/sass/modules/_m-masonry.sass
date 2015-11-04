@@ -1,19 +1,27 @@
 #container
-  margin-top: 65px
-  margin-bottom: 65px
+  margin: 0 auto
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    margin-top: 65px
+    margin-bottom: 65px
+
+.grid
+  padding: 0 !important
 
 .grid-sizer, .grid-item
-  width: 50%
+  // width: 50%
+  // +span-columns(3 of 12)
+  width: 25%
+  margin-right: 0 !important
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    // +span-columns(6 of 12)
+    width: 50%
   img, a
     width: 100%
     display: inline-block
     vertical-align: bottom
 
 .grid-item
-  // padding: 3px
-  // padding-bottom: 0
-  // border: 2px solid white
-  // border-bottom: 0
+  margin: 0
 /* 2 columns */
 .grid-item--width2
   width: 100%
@@ -21,10 +29,13 @@
 .popup
   position: relative
   img
-    // width: 100%
-    display: block
+    display: inline-block
     margin: 0 auto
     width: 100%
+    height: 100%
+    min-height: 100%
+    min-width: 100%
+    vertical-align: bottom
   h2
     position: absolute
     // top: 0
