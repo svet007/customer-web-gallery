@@ -1,8 +1,7 @@
-var percent = 1;
-$('body').loadie(percent);
-
 $( document ).ready(function() {
     'use strict';
+    var percent = 1;
+    $('body').loadie(percent);
 
     var isMobile = false; //initiate as false
     // device detection
@@ -202,7 +201,9 @@ $( document ).ready(function() {
     window.cbpTooltipMenu = cbpTooltipMenu;
 
     // Tooltip Dropdown
-    var menu = new cbpTooltipMenu( document.querySelector( '.cbp-tm-menu' ) );
+    if ($('.cbp-tm-menu').length) {
+        var menu = new cbpTooltipMenu( document.querySelector( '.cbp-tm-menu' ) );
+    }
 
     // LightBox
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -423,4 +424,6 @@ $( document ).ready(function() {
 
     $('#menu').sliiide(settings); //initialize sliiide
 
+    $('#page').fadeIn(2000);
 });
+

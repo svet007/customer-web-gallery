@@ -812,6 +812,10 @@ th {
   font-family: "Adriane";
   src: url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2');
 }
+#page {
+  display: none;
+}
+
 .visible-mobile {
   display: none;
 }
