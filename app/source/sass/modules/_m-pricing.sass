@@ -9,27 +9,42 @@
 
 .m-pricing--box
   background-color: white
-  padding: 200px 0 40px 0
+  padding: 173px 0 40px 0
   position: relative
-  &.shadow
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    padding: 106px 0 40px 0
+  &.popular
     box-shadow: 0 1px 15px black
     +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
       box-shadow: none
-
+      border: 0
+      padding: 126px 0 40px 0
+      .corner-ribbon.top-left
+        +transform(rotate(0))
+        top: auto
+        bottom: 0
+        left: 0
 
 .m-pricing--header
+  overflow: hidden
   position: absolute
   top: 0
   left: 0
   right: 0
   font-family: "Lato-Black", sans-serif
   text-align: center
+  padding-bottom: 0px
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    .popular &
+      padding-bottom: 20px
   h1
     color: white
     position: relative
     margin-top: 30px
-    margin-bottom: 0
     font-size: 36px
+    margin-bottom: 0
+    +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+      margin-bottom: 30px
     &.off-10:after
       font-family: "Lato-Italic", sans-serif
       font-weight: 300

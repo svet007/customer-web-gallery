@@ -28,7 +28,7 @@
           <div class="l-content">
             <h2 class="m-pricing--title">PRICES</h2>
             </br>
-            <div class="l-row">
+            <div class="l-row l-content--tiny">
               <ul class="tabs visible-mobile">
                 <li class="tab-link current" data-tab="tab-1">Newborn</li>
                 <li class="tab-link" data-tab="tab-2">Family</li>
@@ -37,8 +37,9 @@
               <div id="tab-1" class="l-one-third tab-content current">
                 <div class="m-pricing--box">
                   <div class="m-pricing--header pink">
-                      <h1 class="off-10">Newborn</h1>
-                      <h2>$239</h2>
+                      <h1 class="off-10 hidden-mobile">Newborn</h1>
+                      <h2 class="hidden-mobile">$239</h2>
+                      <h1 class="visible-mobile off-10">$239</h1>
                   </div>
                   <ul class="m-pricing--list">
                     <li class="m-pricing--item">
@@ -70,7 +71,7 @@
                       </div>
                     </li>
                     <li class="m-pricing--item">
-                      <i class="icon-slide"></i>
+                      <i class="icon-gallery"></i>
                       Private web gallery
                       <div class="m-pricing--amount">
                         <i class="icon-check"></i>
@@ -90,10 +91,12 @@
                 </div>
               </div>
               <div id="tab-2" class="l-one-third tab-content">
-                <div class="m-pricing--box shadow">
+                <div class="m-pricing--box popular">
                   <div class="m-pricing--header light-green">
-                    <h1 class="off-20">Family</h1>
-                    <h2>$279</h2>
+                    <div class="corner-ribbon top-left red shadow">Most popular</div>
+                    <h1 class="off-20 hidden-mobile">Family</h1>
+                    <h2 class="hidden-mobile">$279</h2>
+                    <h1 class="off-20 visible-mobile"><strong>$279</strong></h1>
                   </div>
                   <ul class="m-pricing--list">
                     <li class="m-pricing--item">
@@ -132,7 +135,7 @@
                       </div>
                     </li>
                     <li class="m-pricing--item">
-                      <i class="icon-slide"></i>
+                      <i class="icon-gallery"></i>
                       Private web gallery
                       <div class="m-pricing--amount">
                         <i class="icon-check"></i>
@@ -153,8 +156,9 @@
               <div id="tab-3" class="l-one-third tab-content">
                 <div class="m-pricing--box">
                   <div class="m-pricing--header lilak">
-                    <h1 class="off-50">Value</h1>
-                    <h2>$349</h2>
+                    <h1 class="off-50 hidden-mobile">Value</h1>
+                    <h2 class="hidden-mobile">$349</h2>
+                    <h1 class="off-50 visible-mobile">$349</h1>
                   </div>
                   <ul class="m-pricing--list">
                     <li class="m-pricing--item">
@@ -207,7 +211,7 @@
                       </div>
                     </li>
                     <li class="m-pricing--item">
-                      <i class="icon-slide"></i>
+                      <i class="icon-gallery"></i>
                       Private web gallery
                       <div class="m-pricing--amount">
                         <i class="icon-check"></i>
@@ -231,6 +235,9 @@
         <script src="Scripts/vendor/masonry.pkgd.min.js"></script>
         <script src="Scripts/vendor/jquery.fullscreen-popup.min.js"></script>
         <script src="Scripts/vendor/jquery.masked-input.js"></script>
+        <script src="Scripts/vendor/jquery.sticky.js"></script>
+        <script src="Scripts/vendor/photoswipe.min.js"></script>
+        <script src="Scripts/vendor/photoswipe-ui-default.min.js"></script>
 
         <script src="Scripts/custom/compiled.min.js"></script>
 

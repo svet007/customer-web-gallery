@@ -1,6 +1,26 @@
 .m-header
   background-color: white
   position: relative
+  &:before
+    content: ""
+    position: absolute
+    width: 54px
+    height: 116px
+    background-image: url('../images/balloon-blue.png')
+    background-size: 100%
+    display: block
+    right: 30%
+    top: 20px
+  &:after
+    content: ""
+    position: absolute
+    width: 54px
+    height: 124px
+    background-image: url('../images/balloon-pink.png')
+    background-size: 100%
+    display: block
+    left: 30%
+    top: 20px
 
 .m-header--note
   +inline-block
@@ -25,3 +45,19 @@
   z-index: 100
   .m-actions
     line-height: 60px
+
+.sticky-wrapper
+  #slideText
+    +transform(translate(0px, -66px))
+    +transition-property(all)
+    +transition-duration(0.3s)
+    +transition-timing-function(cubic-bezier(.42,0,1,1))
+    margin-top: 18px
+    position: absolute
+    left: 0
+    right: 0
+    opacity: 0
+  &.is-sticky
+    #slideText
+      +transform(translate(0px, 0px))
+      opacity: 1
