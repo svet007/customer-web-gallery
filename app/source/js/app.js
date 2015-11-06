@@ -1,5 +1,8 @@
-'use strict';
+var percent = 1;
+$('body').loadie(percent);
+
 $( document ).ready(function() {
+    'use strict';
 
     var isMobile = false; //initiate as false
     // device detection
@@ -14,7 +17,7 @@ $( document ).ready(function() {
             columnWidth: '.grid-sizer',
             percentPosition: true
         });
-    })
+    });
 
     // Photo's popups
     // if(isMobile) {
@@ -26,13 +29,13 @@ $( document ).ready(function() {
     // }
 
     // Open Contact popup
-    $(".open-contact").fullScreenPopup({
-        bgColor: "#fdfdfd",
+    $('.open-contact').fullScreenPopup({
+        bgColor: '#fdfdfd',
         inlineStyles: true,
         lockDocumentScroll: true,
-        mainWrapperClass: "fsp-wrapper",
-        contentWrapperClass: "fsp-content",
-        closePopupClass: "fsp-close",
+        mainWrapperClass: 'fsp-wrapper',
+        contentWrapperClass: 'fsp-content',
+        closePopupClass: 'fsp-close',
         animationSpeed: 200, //ms
     });
 
@@ -50,7 +53,6 @@ $( document ).ready(function() {
     // Sticky info-bar
     $(".m-header--info-bar").sticky({ topSpacing: 0, responsiveWidth: true });
 
-    'use strict';
 
     var document = window.document,
         docElem = document.documentElement;
@@ -194,7 +196,7 @@ $( document ).ready(function() {
             
             return ( spaceDown <= spaceUp ? 'top' : 'bottom' );
         }
-    }
+    };
 
     // add to global namespace
     window.cbpTooltipMenu = cbpTooltipMenu;
