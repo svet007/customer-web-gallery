@@ -1,13 +1,15 @@
 .m-navigation--top-list
   +clearfix
   position: fixed
-  top: 0
-  z-index: 1000
+  top: 0px
+  z-index: 999
   background-color: rgba(245, 182, 241, 0.9)
   height: 65px
   width: 100%
   margin: 0
   padding: 0
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    top: 20px
 
 .m-navigation--top-item
   margin: 13px 0
@@ -23,7 +25,7 @@
   +clearfix
   position: fixed
   bottom: 0
-  z-index: 1000
+  z-index: 999
   background-color: rgba(133, 201, 153, 0.9)
   height: 65px
   width: 100%

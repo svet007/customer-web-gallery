@@ -1,0 +1,256 @@
+// body
+//   overflow: auto !important
+
+.m-slide--promo
+  visibility: visible !important
+  position: absolute !important
+  z-index: 10
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    position: fixed !important
+  &:before
+    position: absolute
+    content: ""
+    height: 6px
+    width: 15px
+    background-image: url('../images/icons2x/icon-hamburger.png')
+    background-size: 100%
+    bottom: -13px
+    left: 50%
+    margin-left: -3px
+    z-index: 2
+  &:after
+    position: absolute
+    content: ""
+    height: 20px
+    bottom: -20px
+    left: 0
+    right: 0
+    background-color: #bf0055
+    z-index: 1
+
+.flex-center-wrapper
+  display: flex
+  display: -webkit-flex
+  align-content: center
+  align-items: center
+  -webkit-align-content: center
+  -webkit-align-items: center
+  justify-content: center
+  -webkit-justify-content: center
+  text-align: center
+
+.flex-row
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+
+.flex-column
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+
+.slider-toggle
+  display: block
+  color: white
+  font-size: 14px
+  border: none
+  letter-spacing: 1px
+  font-family: Lato
+  width: 100%
+  height: 60px
+  text-align: center
+  background-color: rgb(43, 57, 69)
+  transition: background-color 0.5s
+  z-index: 1000
+  margin: 0
+  padding: 0 10%
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    font-size: 12px
+    padding: 0 2%
+    p
+      margin: 4px 0
+
+.buttons-container span
+  color: white
+  font-family: Lato
+  font-size: 18px
+  letter-spacing: 1.2px
+
+.selected
+  background-color: rgb(18, 209, 234)
+
+.sliding-menu
+  background-color: rgb(40, 38, 38)
+  visibility: hidden
+  position: fixed
+  overflow: hidden
+  a, p
+    font-family: Lato
+    font-weight: 100
+    letter-spacing: 2px
+    font-size: 18px
+    color: rgb(200, 200, 200)
+    text-decoration: none
+    margin: 0 20px
+    margin: 0
+  ul
+    list-style: none
+    text-align: center
+    padding: 0
+  li
+    margin: 40px auto 40px auto
+  hr
+    width: 50%
+    min-width: 100px
+    border-color: rgb(18, 209, 234)
+
+.exit
+  position: absolute
+  font-size: 40px
+  color: white
+  cursor: pointer
+  z-index: 100
+
+.left-exit, .top-exit, .bottom-exit
+  top: 0px
+  right: 10px
+
+.right-exit
+  top: 20px
+  left: 40px
+
+.buttons-container
+  max-width: 700px
+  margin: 0 auto 0 auto
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
+
+.note
+  position: absolute
+  width: 250px
+
+.left-note
+  bottom: 3%
+  left: 5%
+
+.right-note
+  bottom: 10%
+  right: 5%
+
+.top-note
+  top: 3%
+  right: 5%
+
+.topleft-note
+  position: fixed
+  top: 75px
+  left: 45px
+
+.bottom-note
+  bottom: 5%
+  right: 3%
+
+#demo-note p
+  text-align: left
+  font-family: Gochi Hand
+  font-size: 18px
+  color: white
+  margin: 5px 15px
+
+.note p
+  font-family: Gochi Hand
+  font-size: 18px
+  color: white
+  margin: 20px
+  width: 200px
+  position: static
+  display: inline-block
+
+.arrow
+  fill: white
+  height: 25px
+  width: 25px
+  margin: 0 auto 0 auto
+  display: inline-block
+
+.top-arrow
+  -webkit-transform: rotateZ(90deg)
+  -ms-transform: rotateZ(90deg)
+  transform: rotateZ(90deg)
+
+.topleft-arrow
+  -webkit-transform: rotateZ(205deg)
+  -ms-transform: rotateZ(205deg)
+  transform: rotateZ(205deg)
+
+.right-arrow
+  -webkit-transform: rotateZ(180deg)
+  -ms-transform: rotateZ(180deg)
+  transform: rotateZ(180deg)
+
+.bottom-arrow
+  -webkit-transform: rotateZ(-90deg)
+  -ms-transform: rotateZ(-90deg)
+  transform: rotateZ(-90deg)
+
+.left-menu, .right-menu
+  width: 300px
+
+.top-menu
+  height: 100%
+
+.bottom-menu
+  height: 100px
+
+.rotate
+  -webkit-transform: rotateY(360deg)
+  -ms-transform: rotateY(360deg)
+  transform: rotateY(360deg)
+
+.display-off
+  display: none
+
+.newsletter-signup
+  span
+    margin: 10px 20px
+    font-weight: 300
+    color: white
+    font-family: Lato
+    letter-spacing: 0.5px
+  input
+    padding: 10px 20px
+    border: 0
+
+.cta
+  background-color: rgb(18, 209, 234)
+  font-family: Lato
+  color: white
+  padding: 10px 20px
+  border: 0
+  margin: 0 10px
+
+.social
+  -webkit-transition: background-color 0.5s
+  transition: background-color 0.5s
+  width: 80px
+  &:hover
+    background-color: rgb(67, 118, 129)
+
+@media only screen and (max-width: 600px)
+  .bottom-menu
+    height: 200px
+  .newsletter-signup
+    input
+      display: block
+      width: 150px
+      margin: 15px auto
+      padding: 10px 0
+    button
+      width: 150px
+      margin: auto
+  h1
+    font-size: 32px
+  h2
+    font-size: 20px
+  .buttons-container span, .note p, #demo-note p
+    font-size: 14px
