@@ -973,7 +973,7 @@ hr {
 }
 @media (max-width: 700px), (orientation: portrait) {
   .m-navigation--bottom-list {
-    bottom: 20px;
+    bottom: 30px;
   }
 }
 
@@ -1364,7 +1364,7 @@ hr {
 }
 @media (max-width: 700px), (orientation: portrait) {
   #container {
-    margin-top: 85px;
+    margin-top: 65px;
     margin-bottom: 65px;
   }
 }
@@ -2905,7 +2905,6 @@ hr {
 }
 
 .slider-toggle {
-  position: absolute;
   bottom: 0;
   display: block;
   color: white;
@@ -2927,7 +2926,7 @@ hr {
   width: 15px;
   background-image: url("../images/icons2x/icon-hamburger.png");
   background-size: 100%;
-  top: -13px;
+  top: -25px;
   left: 50%;
   margin-left: -3px;
   z-index: 2;
@@ -2935,8 +2934,8 @@ hr {
 .slider-toggle:after {
   position: absolute;
   content: "";
-  height: 20px;
-  top: -20px;
+  height: 30px;
+  top: -30px;
   left: 0;
   right: 0;
   background-color: #bf0055;
