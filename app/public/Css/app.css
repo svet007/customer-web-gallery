@@ -1599,7 +1599,7 @@ hr {
 .m-pricing--header .old-price {
   font-size: 15px;
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .m-pricing--header h1 {
   color: white;
@@ -1615,7 +1615,7 @@ hr {
 }
 .m-pricing--header h1.off-10:after {
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
   font-size: 24px;
   content: "%10 off";
@@ -1625,7 +1625,7 @@ hr {
 }
 .m-pricing--header h1.off-20:after {
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
   font-size: 24px;
   content: "%20 off";
@@ -1635,7 +1635,7 @@ hr {
 }
 .m-pricing--header h1.off-50:after {
   font-family: "Lato", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
   font-size: 24px;
   content: "%50 off";
