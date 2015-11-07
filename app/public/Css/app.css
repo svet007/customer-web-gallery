@@ -1596,6 +1596,11 @@ hr {
     padding-bottom: 20px;
   }
 }
+.m-pricing--header .old-price {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
 .m-pricing--header h1 {
   color: white;
   position: relative;
@@ -1609,39 +1614,44 @@ hr {
   }
 }
 .m-pricing--header h1.off-10:after {
-  font-family: "Lato-Italic", sans-serif;
-  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   font-style: italic;
-  font-size: 12px;
+  font-size: 24px;
   content: "%10 off";
   position: absolute;
-  top: -10px;
+  top: -20px;
+  right: 15px;
 }
 .m-pricing--header h1.off-20:after {
-  font-family: "Lato-Italic", sans-serif;
-  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   font-style: italic;
-  font-size: 12px;
+  font-size: 24px;
   content: "%20 off";
   position: absolute;
-  top: -10px;
+  top: -20px;
+  right: 15px;
 }
 .m-pricing--header h1.off-50:after {
-  font-family: "Lato-Italic", sans-serif;
-  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
   font-style: italic;
-  font-size: 12px;
+  font-size: 24px;
   content: "%50 off";
   position: absolute;
-  top: -10px;
+  top: -20px;
+  right: 15px;
 }
 .m-pricing--header h2 {
   font-size: 45px;
   font-family: "Lato-Light", sans-serif;
   font-weight: 300;
   line-height: 45px;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-bottom: 25px;
   color: white;
+  padding-left: 20%;
 }
 .m-pricing--header.pink {
   background-color: #dd5c9e;
@@ -1712,6 +1722,34 @@ hr {
 }
 .m-pricing--item span.smaller {
   font-size: 12px;
+}
+
+.m-pricing--hst {
+  padding-left: 1px;
+  float: left;
+}
+.m-pricing--hst h6 {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+  width: 40%;
+}
+.m-pricing--hst h6 + p {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 11px;
+  color: white;
 }
 
 .tab-content {
@@ -2050,6 +2088,9 @@ hr {
 }
 .m-actions.right {
   float: right;
+}
+.m-actions.top {
+  margin-top: 20px;
 }
 
 /* reset  list style */
