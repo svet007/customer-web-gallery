@@ -941,11 +941,6 @@ hr {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 700px), (orientation: portrait) {
-  .m-navigation--top-list {
-    top: 20px;
-  }
-}
 
 .m-navigation--top-item {
   margin: 13px 0;
@@ -975,6 +970,11 @@ hr {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 700px), (orientation: portrait) {
+  .m-navigation--bottom-list {
+    bottom: 20px;
+  }
 }
 
 .m-navigation--bottom-item {
