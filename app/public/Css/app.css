@@ -1728,6 +1728,11 @@ hr {
   padding-left: 1px;
   float: left;
 }
+@media (max-width: 700px), (orientation: portrait) {
+  .m-pricing--hst {
+    padding: 0 2%;
+  }
+}
 .m-pricing--hst h6 {
   display: inline-block;
   vertical-align: middle;
@@ -1750,6 +1755,13 @@ hr {
   *display: inline;
   font-size: 11px;
   color: white;
+}
+
+@media (max-width: 700px), (orientation: portrait) {
+  .m-pricing--bg .m-button--grey {
+    width: 98%;
+    margin-bottom: 5px;
+  }
 }
 
 .tab-content {

@@ -140,6 +140,8 @@
 .m-pricing--hst
   padding-left: 1px
   float: left
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    padding: 0 2%
   h6
     +inline-block
     font-family: "Roboto", sans-serif
@@ -153,4 +155,10 @@
       +inline-block
       font-size: 11px
       color: white
+
+.m-pricing--bg
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    .m-button--grey
+      width: 98%
+      margin-bottom: 5px
 
