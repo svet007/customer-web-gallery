@@ -1913,6 +1913,8 @@ hr {
 }
 .m-header--info-bar .m-actions {
   line-height: 60px;
+  position: relative;
+  z-index: 10;
 }
 
 .sticky-wrapper #slideText {
