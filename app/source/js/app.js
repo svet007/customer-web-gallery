@@ -14,7 +14,8 @@ $( document ).ready(function() {
             itemSelector: '.grid-item',
             // use element for option
             columnWidth: '.grid-sizer',
-            percentPosition: true
+            percentPosition: true,
+            gutter : 5
         });
     });
 
@@ -422,7 +423,14 @@ $( document ).ready(function() {
         no_scroll: false, //set to true if you want the scrolling disabled while the menu is active
     };
 
-    $('#menu').sliiide(settings); //initialize sliiide
+    var slide = $('#menu').sliiide(settings); //initialize sliiide
+
+    $(window).scroll(function() {
+       if($(window).scrollTop() + $(window).height() == $(document).height()) {
+              slide.activate();
+          }
+    });
+
 
     $('#page').fadeIn(2000);
 });

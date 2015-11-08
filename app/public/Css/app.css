@@ -371,416 +371,6 @@ th {
   padding: 0;
 }
 
-/* ==========================================================================
-   Normalize.scss settings
-   ========================================================================== */
-/**
- * Includes legacy browser support IE6/7
- *
- * Set to false if you want to drop support for IE6 and IE7
- */
-/* Base
-   ========================================================================== */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
- * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
- *  `em` units.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
-}
-
-/**
- * Prevents modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
-a:active, a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Addresses styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * 1. Remove border when inside `a` element in IE 8/9/10.
- * 2. Improves image quality when scaled in IE 7.
- */
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *  Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 4. Improves appearance and consistency in all browsers.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *  and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *  `input` and others.
- * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
- *  Known issue: inner spacing remains in IE 6.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-input {
-  line-height: normal;
-}
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- *  Known issue: excess padding remains in IE 6.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  box-sizing: content-box;
-  /* 2 */
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- * 3. Corrects text not wrapping in Firefox 3.
- * 4. Corrects alignment displayed oddly in IE 6/7.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
 /*Makes possible to use a n-ple density sprite
  *Automatically adapts background-size and offset when $multiplier is greater than 1
  *Allows you to use automatic size generation, which is automatically adapted when $multiplier is greater than 1
@@ -810,7 +400,9 @@ th {
  *- $offsetY (0) - the vertical offset (px) for the image in the box */
 @font-face {
   font-family: "Adriane";
-  src: url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+  src: url("url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2').eot?#iefix") format("embedded-opentype"), url("url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2').woff2") format("woff2"), url("url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2').woff") format("woff"), url("url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2').ttf") format("truetype"), url("url('../Fonts/adriane_regular.eot?1440790624') format('embedded-opentype'), url('../Fonts/adriane_regular.otf?1419643642') format('opentype'), url('../Fonts/adriane_regular.ttf?1440790624') format('truetype'), url('../Fonts/adriane_regular.woff?1440790624') format('woff'), url('../Fonts/adriane_regular.woff2?1440790624') format('woff2').svg#Adriane") format("svg");
 }
 #page {
   display: none;
@@ -877,11 +469,14 @@ hr {
 }
 
 .l-row {
-  overflow: hidden;
-  *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+}
+.l-row::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 .l-row.overflow-visible {
   overflow: visible;
@@ -930,8 +525,6 @@ hr {
 }
 
 .m-navigation--top-list {
-  overflow: hidden;
-  *zoom: 1;
   position: fixed;
   top: 0px;
   z-index: 999;
@@ -940,6 +533,11 @@ hr {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+.m-navigation--top-list::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .m-navigation--top-item {
@@ -960,8 +558,6 @@ hr {
 }
 
 .m-navigation--bottom-list {
-  overflow: hidden;
-  *zoom: 1;
   position: fixed;
   bottom: 0;
   z-index: 999;
@@ -970,6 +566,11 @@ hr {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+.m-navigation--bottom-list::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 @media (max-width: 700px), (orientation: portrait) {
   .m-navigation--bottom-list {
@@ -1374,12 +975,12 @@ hr {
 }
 
 .grid-sizer, .grid-item {
-  width: 25%;
+  width: 24.5%;
   margin-right: 0 !important;
 }
 @media (max-width: 700px), (orientation: portrait) {
   .grid-sizer, .grid-item {
-    width: 50%;
+    width: 49.6%;
   }
 }
 .grid-sizer img, .grid-sizer a, .grid-item img, .grid-item a {
@@ -1390,6 +991,7 @@ hr {
 
 .grid-item {
   margin: 0;
+  margin-bottom: 5px;
 }
 
 /* 2 columns */
@@ -1481,18 +1083,17 @@ hr {
 }
 
 .m-form--tooltip .m-form--row {
-  overflow: hidden;
-  *zoom: 1;
   background-color: #f3f3f3;
   border-bottom: 1px solid #c6c6c6;
   border-top: 1px solid #fff;
 }
+.m-form--tooltip .m-form--row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 .m-form--tooltip textarea, .m-form--tooltip input {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -1523,10 +1124,6 @@ hr {
 }
 .m-form--tooltip label {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   font-size: 12px;
   color: #626262;
   float: left;
@@ -1535,14 +1132,17 @@ hr {
 }
 
 .m-pricing--bg {
-  overflow: hidden;
-  *zoom: 1;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgzODhlNCIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjOTNjNWMyIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDA4MmVmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8388e4), color-stop(50%, #93c5c2), color-stop(100%, #d082ef));
   background-image: -moz-linear-gradient(#8388e4, #93c5c2, #d082ef);
   background-image: -webkit-linear-gradient(#8388e4, #93c5c2, #d082ef);
   background-image: linear-gradient(#8388e4, #93c5c2, #d082ef);
+}
+.m-pricing--bg::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .m-pricing--title {
@@ -1571,9 +1171,10 @@ hr {
     padding: 126px 0 40px 0;
   }
   .m-pricing--box.popular .corner-ribbon.top-left {
+    -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
-    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
     transform: rotate(0);
     top: auto;
     bottom: 0;
@@ -1667,11 +1268,14 @@ hr {
 }
 
 .m-pricing--list {
-  overflow: hidden;
-  *zoom: 1;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.m-pricing--list::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 .m-pricing--list li {
   list-style-image: none;
@@ -1681,10 +1285,6 @@ hr {
 
 .m-pricing--item {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   width: 100%;
   color: black;
   font-family: "Roboto", sans-serif;
@@ -1735,10 +1335,6 @@ hr {
 }
 .m-pricing--hst h6 {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: white;
@@ -1749,10 +1345,6 @@ hr {
 }
 .m-pricing--hst h6 + p {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   font-size: 11px;
   color: white;
 }
@@ -1843,7 +1435,7 @@ hr {
   background-size: 100%;
   display: block;
   right: -80px;
-  top: 33px;
+  top: 38px;
 }
 .m-header:after {
   content: "";
@@ -1854,7 +1446,7 @@ hr {
   background-size: 100%;
   display: block;
   left: -80px;
-  top: 44px;
+  top: 48px;
 }
 .m-header h2 {
   font-family: "Rancho", sans-serif;
@@ -1873,10 +1465,6 @@ hr {
 
 .m-header--inner {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   overflow: hidden;
   margin-bottom: 25px;
   position: relative;
@@ -1885,10 +1473,6 @@ hr {
 
 .m-header--note {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -1906,13 +1490,11 @@ hr {
 }
 
 .m-header--info-bar {
-  -moz-transition-property: background-color;
-  -o-transition-property: background-color;
   -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
   transition-property: background-color;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.3);
@@ -1930,21 +1512,19 @@ hr {
 }
 
 .sticky-wrapper #slideText {
+  -webkit-transform: translate(0px, -66px);
   -moz-transform: translate(0px, -66px);
   -ms-transform: translate(0px, -66px);
-  -webkit-transform: translate(0px, -66px);
+  -o-transform: translate(0px, -66px);
   transform: translate(0px, -66px);
-  -moz-transition-property: all;
-  -o-transition-property: all;
   -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -moz-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
-  -o-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   -webkit-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+  -moz-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
   margin-top: 0;
   position: absolute;
@@ -1956,9 +1536,10 @@ hr {
   opacity: 0;
 }
 .sticky-wrapper.is-sticky #slideText {
+  -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
-  -webkit-transform: translate(0px, 0px);
+  -o-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   opacity: 1;
 }
@@ -1975,11 +1556,8 @@ hr {
 }
 .m-button--red i, .m-button--grey i {
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  *zoom: 1;
-  *display: inline;
   margin-right: 7px;
+  vertical-align: middle;
 }
 
 .m-button--red {
@@ -2124,9 +1702,8 @@ hr {
   padding: 0;
   text-align: left;
   pointer-events: none;
-  -moz-transition: visibility 0s, opacity 0s;
-  -o-transition: visibility 0s, opacity 0s;
   -webkit-transition: visibility 0s, opacity 0s;
+  -moz-transition: visibility 0s, opacity 0s;
   transition: visibility 0s, opacity 0s;
 }
 .cbp-tm-submenu > div {
@@ -2145,9 +1722,8 @@ hr {
   display: inline-block;
   visibility: visible;
   pointer-events: auto;
-  -moz-transition: visibility 0s, opacity 0.3s;
-  -o-transition: visibility 0s, opacity 0.3s;
   -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
   transition: visibility 0s, opacity 0.3s;
 }
 .m-actions.left .cbp-tm-show .cbp-tm-submenu {
@@ -2331,321 +1907,6 @@ hr {
   text-indent: -9999px;
 }
 
-/* =============================================================================
- *  ICONS - DEMO 1
- *============================================================================= */
-/**
- * "icon-mono" class name used to indicate monochrome-type icon. Use whatever
- * class name you want, but make sure to change it up in the markup.
- *
- * Example HTML:
- *
- * <a href="#" class="icon icon-mono facebook">facebook</a>
- * <a href="#" class="icon icon-mono twitter">twitter</a>
- * ... */
-.icon-mono {
-  background: url("../images/svg/icons1.png");
-  background-image: url("../images/svg/icons1.svg"), none;
-  background-color: #595959;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-}
-.icon-mono.facebook {
-  background-position: 0 0;
-}
-.icon-mono.facebook:hover {
-  background-color: #3b5998;
-  background-position: 0 -96px;
-}
-.icon-mono.twitter {
-  background-position: -96px 0;
-}
-.icon-mono.twitter:hover {
-  background-color: #4099ff;
-  background-position: -96px -96px;
-}
-.icon-mono.googleplus {
-  background-position: -192px 0;
-}
-.icon-mono.googleplus:hover {
-  background-color: #d34836;
-  background-position: -192px -96px;
-}
-.icon-mono.github {
-  background-position: -288px 0;
-}
-.icon-mono.github:hover {
-  background-color: #333333;
-  background-position: -288px -96px;
-}
-.icon-mono.rss {
-  background-position: -384px 0;
-}
-.icon-mono.rss:hover {
-  background-color: #ee802f;
-  background-position: -384px -96px;
-}
-
-/* facebook */
-/* twitter */
-/* google plus */
-/* github */
-/* rss */
-/* =============================================================================
- *  ICONS - DEMO 2
- *============================================================================= */
-/**
- * "icon-nudge" class name used to indicate an icon that nudges upward on hover
- * and a little coloured border that nudges upward with it.
- *
- * Example HTML:
- *
- * <a href="#" class="icon icon-nudge facebook">facebook</a>
- * <a href="#" class="icon icon-nudge twitter">twitter</a>
- * ... */
-.icon-nudge {
-  position: relative;
-  background: url("../images/svg/icons2.png");
-  background-image: url("../images/svg/icons2.svg"), none;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.icon-nudge::after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  content: "";
-  -webkit-transition: height 0.2s;
-  transition: height 0.2s;
-}
-.icon-nudge:hover::after {
-  height: 8px;
-}
-.icon-nudge.facebook {
-  background-color: #3b5998;
-  background-position: 0 0;
-}
-.icon-nudge.facebook:hover {
-  background-position: 0 -8px;
-}
-.icon-nudge.facebook::after {
-  background-color: #1e2e4f;
-}
-.icon-nudge.twitter {
-  background-color: #4099ff;
-  background-position: -96px 0;
-}
-.icon-nudge.twitter:hover {
-  background-position: -96px -8px;
-}
-.icon-nudge.twitter::after {
-  background-color: #0065d9;
-}
-.icon-nudge.googleplus {
-  background-color: #d34836;
-  background-position: -192px 0;
-}
-.icon-nudge.googleplus:hover {
-  background-position: -192px -8px;
-}
-.icon-nudge.googleplus::after {
-  background-color: #86291d;
-}
-.icon-nudge.github {
-  background-color: #333333;
-  background-position: -288px 0;
-}
-.icon-nudge.github:hover {
-  background-position: -288px -8px;
-}
-.icon-nudge.github::after {
-  background-color: #4d4d4d;
-}
-.icon-nudge.rss {
-  background-color: #ee802f;
-  background-position: -384px 0;
-}
-.icon-nudge.rss:hover {
-  background-position: -384px -8px;
-}
-.icon-nudge.rss::after {
-  background-color: #a9500e;
-}
-
-/* facebook */
-/* twitter */
-/* google plus */
-/* github */
-/* rss */
-/* =============================================================================
- *  ICONS - DEMO 3
- *============================================================================= */
-/**
- * "icon-slide" class name used to indicate an icon that has an animated slide
- * effect.
- *
- * Example HTML:
- *
- * <a href="#" class="icon icon-slide facebook">facebook</a>
- * <a href="#" class="icon icon-slide twitter">twitter</a>
- * ... */
-.icon-slide {
-  position: relative;
-}
-.icon-slide::before, .icon-slide::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../images/svg/icons3.png");
-  background-image: url("../images/svg/icons3.svg"), none;
-  content: "";
-  -webkit-transition: left 0.3s;
-  transition: left 0.3s;
-}
-.icon-slide::before {
-  left: 0;
-  background-color: #595959;
-}
-.icon-slide::after {
-  left: -100%;
-}
-.icon-slide:hover::before {
-  left: 100%;
-}
-.icon-slide:hover::after {
-  left: 0;
-}
-.icon-slide.facebook::before {
-  background-position: 0 0;
-}
-.icon-slide.facebook::after {
-  background-position: 0 0;
-  background-color: #3b5998;
-}
-.icon-slide.twitter::before {
-  background-position: -96px 0;
-}
-.icon-slide.twitter::after {
-  background-position: -96px 0;
-  background-color: #4099ff;
-}
-.icon-slide.googleplus::before {
-  background-position: -192px 0;
-}
-.icon-slide.googleplus::after {
-  background-position: -192px 0;
-  background-color: #d34836;
-}
-.icon-slide.github::before {
-  background-position: -288px 0;
-}
-.icon-slide.github::after {
-  background-position: -288px 0;
-  background-color: #333333;
-}
-.icon-slide.rss::before {
-  background-position: -384px 0;
-}
-.icon-slide.rss::after {
-  background-position: -384px 0;
-  background-color: #ee802f;
-}
-
-/* facebook */
-/* twitter */
-/* google plus */
-/* github */
-/* rss */
-/* =============================================================================
- *  ICONS - DEMO 4
- *============================================================================= */
-/**
- * "icon-border" class name used to indicate an icon that has an animated border
- * effect.
- *
- * Example HTML:
- *
- * <a href="#" class="icon icon-border facebook">facebook</a>
- * <a href="#" class="icon icon-border twitter">twitter</a>
- * ... */
-.icon-border {
-  position: relative;
-}
-.icon-border::before, .icon-border::after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-}
-.icon-border::before {
-  z-index: 1;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-}
-.icon-border::after {
-  z-index: 2;
-  background: url("../images/svg/icons4.png");
-  background-image: url("../images/svg/icons4.svg"), none;
-}
-.icon-border.facebook::before {
-  box-shadow: inset 0 0 0 24px #3b5998;
-}
-.icon-border.facebook:hover::before {
-  box-shadow: inset 0 0 0 4px #3b5998;
-}
-.icon-border.facebook::after {
-  background-position: 0 0;
-}
-.icon-border.twitter::before {
-  box-shadow: inset 0 0 0 24px #4099ff;
-}
-.icon-border.twitter:hover::before {
-  box-shadow: inset 0 0 0 4px #4099ff;
-}
-.icon-border.twitter::after {
-  background-position: -96px 0;
-}
-.icon-border.googleplus::before {
-  box-shadow: inset 0 0 0 24px #d34836;
-}
-.icon-border.googleplus:hover::before {
-  box-shadow: inset 0 0 0 4px #d34836;
-}
-.icon-border.googleplus::after {
-  background-position: -192px 0;
-}
-.icon-border.github::before {
-  box-shadow: inset 0 0 0 24px #333333;
-}
-.icon-border.github:hover::before {
-  box-shadow: inset 0 0 0 4px #333333;
-}
-.icon-border.github::after {
-  background-position: -288px 0;
-}
-.icon-border.rss::before {
-  box-shadow: inset 0 0 0 24px #ee802f;
-}
-.icon-border.rss:hover::before {
-  box-shadow: inset 0 0 0 4px #ee802f;
-}
-.icon-border.rss::after {
-  background-position: -384px 0;
-}
-
-/* facebook */
-/* twitter */
-/* google plus */
-/* github */
-/* rss */
 /* =============================================================================
  *  ICONS - DEMO 5
  *============================================================================= */
