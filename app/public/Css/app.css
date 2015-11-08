@@ -865,6 +865,7 @@ hr {
   background: transparent url('../images/icons1x-sfb55a4ebcf.png') no-repeat 0 -105px;
   height: 23px;
   width: 28px;
+  top: 1px !important;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .icon-download {
@@ -1350,9 +1351,13 @@ hr {
 }
 
 @media (max-width: 700px), (orientation: portrait) {
+  .m-pricing--bg .m-actions {
+    float: left !important;
+  }
   .m-pricing--bg .m-button--grey {
-    width: 98%;
     margin-bottom: 5px;
+    font-size: 10px !important;
+    float: left;
   }
 }
 
