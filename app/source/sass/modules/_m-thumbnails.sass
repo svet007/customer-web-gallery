@@ -7,6 +7,9 @@
   width: 126px
   height: 126px
   float: left
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    float: none
+    display: inline-block
   a
     display: block
   img
