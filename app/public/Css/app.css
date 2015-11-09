@@ -2532,13 +2532,8 @@ hr {
   margin: 5px;
   width: 126px;
   height: 126px;
-  float: left;
-}
-@media (max-width: 700px), (orientation: portrait) {
-  .m-thumb {
-    float: none;
-    display: inline-block;
-  }
+  float: none;
+  display: inline-block;
 }
 .m-thumb a {
   display: block;
