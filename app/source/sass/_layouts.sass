@@ -26,3 +26,10 @@
 
 .l-content--tiny
   padding: 10px 0
+
+.l-half
+  +span-columns(8 of 12)
+  +shift(2)
+  +breakpoint($breakpoint-wide-portrait, $no-query: '.no-mqs')
+    +span-columns(12 of 12)
+    margin: 0
